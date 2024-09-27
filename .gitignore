@@ -445,6 +445,9 @@ Generated\ Files/
 [Tt]est[Rr]esult*/
 [Bb]uild[Ll]og.*
 
+# no scikit-build
+_skbuild/
+
 # NUnit
 *.VisualState.xml
 TestResult.xml

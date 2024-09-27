@@ -1,6 +1,7 @@
 pybind11==2.11.0
 pybind11-global==2.11.0
 opencv-python
-numpy
+numpy<2.0
 plyfile
 open3d
+scikit-build
