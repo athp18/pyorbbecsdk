@@ -384,6 +384,10 @@ typedef enum {
      * @brief Query the status of laser pulse width protection (read-only)
      */
     OB_PROP_LASER_PULSE_WIDTH_PROTECTION_STATUS_BOOL = 149,
+    /**
+     * @brief depth noise removal filter
+     */
+    OB_PROP_DEPTH_NOISE_REMOVAL_FILTER_BOOL = 165,
 
     /**
      * @brief Laser always on, true: always on, false: off, laser will be turned off when out of exposure time
@@ -412,6 +416,31 @@ typedef enum {
      * @brief IR brightness
      */
     OB_PROP_IR_BRIGHTNESS_INT = 184,
+
+    /**
+     * @brief slave device sync status
+     */
+    OB_PROP_SLAVE_DEVICE_SYNC_STATUS_BOOL = 188,
+
+    /**
+     * @brief Color AE max exposure
+     */
+    OB_PROP_COLOR_AE_MAX_EXPOSURE_INT = 189,
+
+    /**
+     * @brief IR AE max exposure
+     */
+    OB_PROP_IR_AE_MAX_EXPOSURE_INT = 190,
+
+    /**
+     * @brief disparity search range mode
+     */
+    OB_PROP_DISP_SEARCH_RANGE_MODE_INT = 191,
+
+    /**
+     * @brief cpu temperature correction . true: calibrate temperature
+     */
+    OB_PROP_CPU_TEMPERATURE_CALIBRATION_BOOL = 199,
 
     /**
      * @brief Baseline calibration parameters
@@ -691,6 +720,11 @@ typedef enum {
      * @brief Right IR frame data unpacking function switch (each current will be turned on by default, support RLE/Y10/Y11/Y12/Y14 format)
      */
     OB_PROP_SDK_IR_RIGHT_FRAME_UNPACK_BOOL = 3012,
+
+    /**
+     * @brief depth Margin Filter
+     */
+    OB_PROP_SDK_DEPTH_RECTIFY_MG_FILTER_BOOL = 3013,
 
     /**
      * @brief Calibration JSON file read from device (Femto Mega, read only)

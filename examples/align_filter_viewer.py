@@ -13,12 +13,14 @@
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
 # ******************************************************************************
-from pyorbbecsdk import *
+import argparse
+import sys
+
 import cv2
 import numpy as np
+
+from pyorbbecsdk import *
 from utils import frame_to_bgr_image
-import sys
-import argparse
 
 ESC_KEY = 27
 
@@ -79,6 +81,10 @@ def main(argv):
         try:
             frames = pipeline.wait_for_frames(100)
             if not frames:
+                continue
+            color_frame = frames.get_color_frame()
+            depth_frame = frames.get_depth_frame()
+            if not color_frame or not depth_frame:
                 continue
             frames = align_filter.process(frames)
             color_frame = frames.get_color_frame()
